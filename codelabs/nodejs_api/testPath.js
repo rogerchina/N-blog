@@ -4,7 +4,6 @@
 var path = require('path');
 
 
-
 function main() {
     console.log(path.isAbsolute('/opt'));
 
