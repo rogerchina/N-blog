@@ -47,6 +47,19 @@ function main() {
     console.log(path.normalize('/home/roger/test/\.'));
 
     console.log(path.parse('/home/roger/test/test.txt'));
+
+    console.log(path.relative('/home/roger', '/var/log'));
+    console.log(path.relative('/home/roger/test', '/home/roger'));
+
+    print(path.resolve('/home/roger', 'test'));
+    print(path.resolve('/home/roger', 'test', '/opt'));
+
+    print(path.sep);
+    print('home/roger/test'.split(path.sep));
+}
+
+function print(str) {
+    console.log(str);
 }
 
 main();
