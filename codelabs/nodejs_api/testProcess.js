@@ -7,7 +7,14 @@
 
 
 function main() {
-    // process.
+    testExit();
+
+}
+
+function testExit() {
+    process.on('exit', function (code) {
+        print('i am exiting...');
+    })
 }
 
 function print(str) {
