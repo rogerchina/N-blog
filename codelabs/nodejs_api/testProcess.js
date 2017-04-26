@@ -12,8 +12,12 @@ function main() {
 }
 
 function testExit() {
+    process.on('beforeExit', function (code) {
+        print("i am in before exiting...");
+    })
+
     process.on('exit', function (code) {
-        print('i am exiting...');
+        print('i am exiting... with exit code is ' + code);
     })
 }
 
