@@ -15,7 +15,7 @@ function main() {
 function testUncaughtException() {
     process.on('uncaughtException', function (err) {
         fs.writeSync(1, 'Caught exception: ${err}');
-    })
+    });
     
     setTimeout(function () {
         print('this will run...');
